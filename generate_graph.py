@@ -61,6 +61,7 @@ def main():
     y_labels = [diff[1].bm_diff for diff in significant]
     f, ax = plt.subplots(1)
     ax.bar(x_labels, y_labels, color ='blue')
+    ax.set_ylim(top=1.08)
     ax.set_ylim(bottom=0.95)
     ax.axhline(y=1.0, color='r', linestyle='-')
     plt.xticks(rotation=90)
