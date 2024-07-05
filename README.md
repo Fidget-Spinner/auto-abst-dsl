@@ -1,4 +1,4 @@
-# Automatically Generating an Abstract Interpretation-based Optimizer from a DSL
+# Automatically Generating an Abstract Interpretation-based Optimizer from a DSL Artefacts
 ## Artefacts
 Benchmark results are in folders starting with `bm`.
 They are courtesy of the Faster CPython (Microsoft) team's benchmarking infrastructure.
