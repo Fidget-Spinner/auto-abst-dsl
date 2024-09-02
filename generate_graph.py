@@ -5,6 +5,7 @@ import math
 from scipy.stats import mannwhitneyu, pmean
 import numpy as np
 import matplotlib.pyplot as plt 
+import matplotlib
 
 @dataclasses.dataclass
 class Result:
@@ -46,7 +47,6 @@ def calculate_significance(results1: dict[str, Result], results2: dict[str, Resu
         final_result[bm_name] = Diff(bm_name, bm_diff)
     return final_result
 
-        
 
 def main():
     without_opt = parse_json("./bm-20240629-3.14.0a0-118726c-JIT/bm-20240629-linux-x86_64-Fidget%2dSpinner-optimizer_off-3.14.0a0-118726c.json")
@@ -66,6 +66,10 @@ def main():
     ax.axhline(y=1.0, color='r', linestyle='-')
     plt.xticks(rotation=90)
     plt.subplots_adjust(bottom=0.40)
+    # Credits to https://phyletica.org/matplotlib-fonts/
+    matplotlib.rcParams['pdf.fonttype'] = 42
+    matplotlib.rcParams['ps.fonttype'] = 42
+    plt.show()  
     plt.show()
     
 
