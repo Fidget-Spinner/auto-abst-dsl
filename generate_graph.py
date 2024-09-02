@@ -69,8 +69,10 @@ def main():
     # Credits to https://phyletica.org/matplotlib-fonts/
     matplotlib.rcParams['pdf.fonttype'] = 42
     matplotlib.rcParams['ps.fonttype'] = 42
-    plt.show()  
+    matplotlib.rc('font', size=8)
+    matplotlib.rc('axes', titlesize=8)
     plt.show()
+    # plt.savefig("benchmark_results.pdf")
     
 
 
